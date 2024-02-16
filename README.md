@@ -12,7 +12,7 @@ Just add the following code to the new project's nuxt.config.ts | [Documentation
 export default defineNuxtConfig({
   extends: [
     '../nuxt-kit', // Extend from a local layer
-    'github:afteralls/nui' // Extend from a git repository
+    'github:afteralls/ui' // Extend from a git repository
   ]
 })
 ```
