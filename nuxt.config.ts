@@ -12,7 +12,7 @@ export default defineNuxtConfig({
     compressPublicAssets: true
   },
   devtools: {
-    enabled: true
+    enabled: false
   },
   css: ['@/assets/styles/main.scss'],
   vite: {
@@ -39,27 +39,22 @@ export default defineNuxtConfig({
     inject: true,
     format: ['webp']
   },
-  // i18n: {
-  //   vueI18n: './locale/i18n.config.ts',
-  //   strategy: 'no_prefix',
-  //   defaultLocale: 'ru',
-  //   lazy: true,
-  //   experimental: {
-  //     jsTsFormatResource: true
-  //   },
-  //   langDir: './locale/lang',
-  //   locales: [
-  //     { code: 'en', name: 'English', iso: 'en', file: 'en.ts' },
-  //     { code: 'kz', name: 'Қазақ', iso: 'kk', file: 'kz.ts' },
-  //     { code: 'ru', name: 'Русский', iso: 'ru', file: 'ru.ts' },
-  //     { code: 'uk', name: 'Українська', iso: 'uk', file: 'uk.ts' }
-  //   ],
-  //   detectBrowserLanguage: {
-  //     useCookie: true,
-  //     cookieKey: 'i18nRed',
-  //     redirectOn: 'root'
-  //   }
-  // },
+  i18n: {
+    vueI18n: './locale/i18n.config.ts',
+    strategy: 'no_prefix',
+    defaultLocale: 'ru',
+    lazy: true,
+    langDir: './locale/lang',
+    locales: [
+      { code: 'en', name: 'English', iso: 'en', file: 'en.ts' },
+      { code: 'ru', name: 'Русский', iso: 'ru', file: 'ru.ts' }
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18nRed',
+      redirectOn: 'root'
+    }
+  },
   app: {
     head: {
       charset: 'utf-8',
