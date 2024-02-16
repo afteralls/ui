@@ -11,7 +11,7 @@ Just add the following code to the new project's nuxt.config.ts | [Documentation
 ```ts
 export default defineNuxtConfig({
   extends: [
-    '../nuxt-kit', // Extend from a local layer
+    '../ui', // Extend from a local layer
     'github:afteralls/ui' // Extend from a git repository
   ]
 })
