@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; // Hide highlight
+}
+
+body {
+  background-color: var(--bg);
+  font-family: 'Montserrat', sans-serif;
+  color: var(--txt-m);
+}
+
+table {
+  width: 100%;
+  position: relative;
+  border-collapse: separate;
+  border-spacing: 0;
+  text-align: left;
+
+  tr:first-child {
+    position: relative;
+  }
+
+  th,
+  td {
+    color: var(--txt-s);
+    padding: toRem(5.5) var(--space);
+    border-bottom: toRem(1) solid var(--br);
+  }
+
+  tr td:first-child,
+  tr th:first-child {
+    border-left: toRem(1) solid var(--br);
+  }
+
+  tr td:last-child,
+  tr th:last-child {
+    border-right: toRem(1) solid var(--br);
+  }
+
+  th {
+    white-space: nowrap;
+    position: -webkit-sticky;
+    position: sticky;
+    top: toRem(0);
+    z-index: 3;
+    font-weight: bold;
+    min-height: var(--ui-size);
+    background-color: var(--fg-m);
+    border-top: toRem(1) solid var(--br);
+  }
+
+  tr th:first-child {
+    border-radius: var(--br-rad) 0 0 0;
+  }
+
+  tr th:last-child {
+    border-radius: 0 var(--br-rad) 0 0;
+  }
+
+  tr:last-child td:first-child {
+    border-radius: 0 0 0 var(--br-rad);
+  }
+
+  tr:last-child td:last-child {
+    border-radius: 0 0 var(--br-rad) 0;
+  }
+
+  td {
+    position: relative !important;
+    vertical-align: top;
+    z-index: 1 !important;
+  }
+
+  tr:hover {
+    background-color: var(--fg-s);
+  }
+}
+
+/* Set Color when Selecting Text */
+::selection {
+  background-color: var(--m-h);
+}
+
+/* Hide Default Scrollbar Styles */
+::-webkit-scrollbar {
+  display: none;
+}

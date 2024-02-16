@@ -1,9 +1,3 @@
 <template>
-  <div></div>
+  <div>Hi</div>
 </template>
-
-<style>
-body {
-  background-color: black;
-}
-</style>
