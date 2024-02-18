@@ -1,7 +1,7 @@
 <template>
   <NuxtLink :to="to" :class="[mode]" :target="global ? '_blank' : null" :title="title">
     <UIcon v-if="icon" :name="icon" size="def" />
-    {{ mode !== 'icon' ? title : null }}
+    <span>{{ mode !== 'icon' ? title : null }}</span>
   </NuxtLink>
 </template>
 
@@ -22,6 +22,7 @@ withDefaults(
 a {
   &,
   svg,
+  span,
   &:visited {
     transition:
       filter var(--tr),
@@ -130,6 +131,10 @@ a.page {
       min-width: 1.5rem !important;
       width: 1.5rem !important;
       height: 1.5rem !important;
+    }
+
+    span {
+      display: none;
     }
   }
 }
