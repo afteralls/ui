@@ -8,6 +8,7 @@ const props = withDefaults(
     type?: 'div' | 'section' | 'nav' | 'form'
     display?: 'row' | 'col' | 'grid'
     gap?: Gap
+    id?: string
     pos?: 'between' | 'left' | 'right'
     block?: 'def' | 'alt'
     layout?: 'container' | 'wrapper' | 'screen'
@@ -18,6 +19,7 @@ const props = withDefaults(
     type: 'div',
     display: undefined,
     gap: 'base',
+    id: undefined,
     pos: undefined,
     block: undefined,
     layout: undefined,
@@ -39,6 +41,7 @@ const Block = () =>
   h(
     props.type,
     {
+      id: props.id,
       class: [props.display, props.pos, props.block, props.layout, props.mode],
       style: `${props.display ? `gap: ${gapConfig[props.gap]};` : ''}${
         props.full ? 'width: 100%;' : ''
