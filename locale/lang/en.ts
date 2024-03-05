@@ -1,6 +1,6 @@
 export default defineI18nLocale(() => {
   return {
-    ui: {
+    u: {
       emptyTip: 'No data to display...',
       errorTip: 'Failed to load data...',
       tableName: 'Table name',
