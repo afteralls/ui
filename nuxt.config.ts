@@ -68,15 +68,7 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
       meta: [{ name: 'theme-color', content: '#FFFFFF' }],
-      title: 'UI',
-      link: [
-        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
-        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
-        {
-          rel: 'stylesheet',
-          href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap'
-        }
-      ]
+      title: 'UI'
     },
     layoutTransition: { name: 'main', mode: 'out-in' },
     pageTransition: { name: 'slide', mode: 'out-in' }
