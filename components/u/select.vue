@@ -40,7 +40,7 @@
                 id="option-search"
                 v-model="search"
                 type="text"
-                :placeholder="$t('ui.search')"
+                :placeholder="$t('u.search')"
               />
               <UIcon name="gg:search" class="search-icon" size="sm" />
             </USpace>
@@ -55,7 +55,7 @@
                 :data-opt="opt"
                 :title="$t(opt)"
               >
-                <UText type="span" :text="$t(opt)" />
+                <div><UText type="span" :text="$t(opt)" /></div>
               </button>
               <UScreen v-if="!printArr.length" type="empty" style="border: none" />
             </USpace>
@@ -67,7 +67,7 @@
                 :data-opt="opt"
                 :title="opt"
               >
-                <UText type="span" :text="opt" />
+                <div><UText type="span" :text="opt" /></div>
               </button>
               <UScreen v-if="!printArr.length" type="empty" style="border: none" />
             </USpace>
@@ -193,9 +193,13 @@ onClickOutside(selectTarget, (evt) => {
 
 .option {
   @include option-styles;
+  width: toRem(100) !important;
+  max-width: 100%;
+  min-width: 100%;
   background-color: var(--fg-m);
   min-height: var(--ui-size);
   border-radius: 0;
+
   transition:
     background-color var(--tr),
     border-radius var(--tr),
