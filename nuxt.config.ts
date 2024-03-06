@@ -6,7 +6,8 @@ export default defineNuxtConfig({
     '@nuxtjs/robots',
     '@formkit/auto-animate/nuxt',
     '@nuxtjs/i18n',
-    '@nuxtjs/color-mode'
+    '@nuxtjs/color-mode',
+    '@vite-pwa/nuxt'
   ],
   nitro: {
     compressPublicAssets: true
