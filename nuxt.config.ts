@@ -52,6 +52,9 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
     defaultLocale: 'ru',
     lazy: true,
+    experimental: {
+      jsTsFormatResource: true
+    },
     langDir: './locale/lang',
     locales: [
       { code: 'en', name: 'English', iso: 'en', file: 'en.ts' },
