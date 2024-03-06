@@ -38,15 +38,7 @@ export default defineNuxtConfig({
   },
   image: {
     inject: true,
-    format: ['webp'],
-    screens: {
-      mx: 1271,
-      lg: 1045,
-      md: 870,
-      sm: 700,
-      mob: 430,
-      zf: 374
-    }
+    format: ['webp']
   },
   i18n: {
     vueI18n: './locale/i18n.config.ts',
